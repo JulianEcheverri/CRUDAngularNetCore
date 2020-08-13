@@ -1,0 +1,9 @@
+<table class="table table-sm">
+    <tr *ngFor="let tarjeta of tarjetaService.tarjetasList">
+        <td>{{tarjeta.titular}}</td>
+        <td>{{tarjeta.numeroDeTarjeta}}</td>
+        <td>{{tarjeta.fechaExpiracion}}</td>
+        <td><i class="far fa-lg fa-edit text-info" style="cursor: pointer;" (click)="editarTarjeta(tarjeta)"></i></td>
+        <td><i class="far fa-lg fa-trash-alt text-danger" style="cursor: pointer;" (click)="eliminarTarjeta(tarjeta.id)"></i></td>
+    </tr>
+</table>
